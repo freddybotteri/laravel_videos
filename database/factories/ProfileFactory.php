@@ -19,7 +19,7 @@ class ProfileFactory extends Factory
         return [
             'instagram' => fake()->userName,
             'github' => fake()->userName,
-            'web' => fake()->web
+            'web' => fake()->url
         ];
     }
 }
