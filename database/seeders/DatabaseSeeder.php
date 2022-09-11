@@ -34,7 +34,7 @@ class DatabaseSeeder extends Seeder
 
             $user->groups()->attach($this->array(rand(1,3)));
             $user->image()->save(\App\Models\Image::factory()->make([
-                'url' => 'https://lorempixel.com/90/90/'
+                'url' => 'https://loremflickr.com//90/90'
             ]));
         });
 
