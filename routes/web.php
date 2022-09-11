@@ -27,3 +27,9 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 
 Route::get('/patient', [App\Http\Controllers\PatientController::class, 'index'])->name('patient');
 
+Route::get('/profile/{id}', function($id){
+    $user = App\Models\User::find($id);
+    return view('profile', [
+        'user' => $user
+    ]);
+})->name('profile');
