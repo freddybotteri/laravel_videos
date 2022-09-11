@@ -17,7 +17,9 @@ class ProfileFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'instagram' => fake()->userName,
+            'github' => fake()->userName,
+            'web' => fake()->web
         ];
     }
 }

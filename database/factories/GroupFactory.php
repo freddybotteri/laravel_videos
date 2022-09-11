@@ -14,10 +14,10 @@ class GroupFactory extends Factory
      *
      * @return array<string, mixed>
      */
-    public function definition()
+    public function definition() 
     {
         return [
-            //
+            'name' => fake()->word
         ];
     }
 }
