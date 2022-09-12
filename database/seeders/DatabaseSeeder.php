@@ -43,7 +43,9 @@ class DatabaseSeeder extends Seeder
 
         \App\Models\Post::factory(40)->create()
         ->each(function ($post) {
-            $post->image()->save(\App\Models\Image::factory()->make());
+            $post->image()->save(\App\Models\Image::factory()->make([
+                'url' => 'https://loremflickr.com//90/90'
+            ]));
             $post->tags()->attach($this->array(rand(1,12)));
             $number_comments = rand(1,6);
             for ($i=0; $i < $number_comments; $i++) { 
@@ -53,7 +55,9 @@ class DatabaseSeeder extends Seeder
 
         \App\Models\Video::factory(40)->create()
         ->each(function ($post) {
-            $post->image()->save(\App\Models\Image::factory()->make());
+            $post->image()->save(\App\Models\Image::factory()->make([
+                'url' => 'https://loremflickr.com//90/90'
+            ]));
             $post->tags()->attach($this->array(rand(1,12)));
             $number_comments = rand(1,6);
             for ($i=0; $i < $number_comments; $i++) { 

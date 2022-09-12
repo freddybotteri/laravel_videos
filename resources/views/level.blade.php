@@ -5,34 +5,9 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-body">
-                    <div>
-                        <img
-                        class="rounded-circle"
-                        src="{{ $user->image->url}}"
-                        alt="" >
-                    </div>
-                    
-                    <p>{{ $user->name }}</p>
-                    <p>{{ $user->email }}</p>
-                    <p>inst: <strong>{{ $user->profile->instagram }}</strong></p>
-                    <p>github: <strong>{{ $user->profile->github }}</strong></p>
-                    <p>web: <strong>{{ $user->profile->web }}</strong></p>
-                    <p>Pais: <strong>{{ $user->location->country }}</strong></p>
-                    <p>Nivel:   @if($user->level)
-                                    <a href="{{ route('level', $user->level->id) }}">
-                                        <strong>{{ $user->level->name }}</strong>
-                                    </a>
-                                @else ---
-                                @endif
-                    </p>
-                    <p>
-                        <strong>Grupos: </strong>
-                        @foreach($user->groups as $group)
-                            <span>{{ $group->name }}</span>
-                        @endforeach
-                    </p>
+                <div class="card-header">Todos los usuarios de nivel {{ $level->name }}</div>
 
+                <div class="card-body">
                     <p>Posts</p>
                     <div class="row">
                         @foreach($posts as $post)
@@ -100,7 +75,6 @@
                             </div>
                         @endforeach
                     </div>
-
                 </div>
             </div>
         </div>
