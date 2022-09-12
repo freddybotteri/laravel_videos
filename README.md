@@ -20,7 +20,9 @@ Laravel is a web application framework with expressive, elegant syntax. We belie
 - [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
 
 Laravel is accessible, powerful, and provides tools required for large, robust applications.
-## artisan
+## artisan and vite
+- npm run dev
+- php artisan serve
 - php artisan make:model TableName -mf
 - php artisan migrate
 - php artisan migrate:refresh --seed
